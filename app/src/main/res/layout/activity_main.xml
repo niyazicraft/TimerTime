@@ -8,6 +8,16 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/timerNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Timer Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/hoursInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -16,7 +26,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/minutesInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/timerNameInput" />
 
     <EditText
         android:id="@+id/minutesInput"
@@ -27,7 +37,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/secondsInput"
         app:layout_constraintStart_toEndOf="@+id/hoursInput"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/timerNameInput" />
 
     <EditText
         android:id="@+id/secondsInput"
@@ -38,7 +48,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/minutesInput"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/timerNameInput" />
 
     <Button
         android:id="@+id/startButton"
@@ -50,6 +60,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondsInput" />
 
+    <Button
+        android:id="@+id/addPopcornButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Add Popcorn Timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
     <LinearLayout
         android:id="@+id/timersLayout"
         android:layout_width="0dp"
@@ -58,9 +78,9 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startButton">
+        app:layout_constraintTop_toBottomOf="@+id/addPopcornButton">
 
-        <!-- Dynamic TextViews will be added here -->
+        <!-- Dynamic TextViews and Buttons will be added here -->
 
     </LinearLayout>
 
